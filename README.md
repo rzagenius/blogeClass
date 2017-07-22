@@ -1,4 +1,4 @@
-# Simple PHP MVC Blog System
+# Blog prueba
 
 
 ## Descripcion
