@@ -3,12 +3,12 @@
 
 ## Description
 
-Este es un proyecto de prueba para el proceso de seleccion de la empresa eClass heco usando MVC, html, PHP, boostrap.
+Este es un proyecto de prueba para el proceso de seleccion de la empresa eClass usando MVC, html, PHP, boostrap.
 
 
 ### Requerimientos
 
-* El proyecto esta escrito esta orientado  a objetos de PHP versión 5.5 o superior
+* El proyecto esta orientado a objetos con PHP versión 5.5 o superior
 * boostrap Ultima version
 * Mysql la configuracion de conexion esta con usario root
 * El archivo sql esta en la raiz del directorio
