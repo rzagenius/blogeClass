@@ -1,7 +1,7 @@
 # Simple PHP MVC Blog System
 
 
-## Description
+## Descripcion
 
 Este es un proyecto de prueba para el proceso de seleccion de la empresa eClass usando MVC, html, PHP, boostrap.
 
@@ -25,6 +25,6 @@ Este es un proyecto de prueba para el proceso de seleccion de la empresa eClass 
 * ** Base de datos MySQL / MariaDB 5 ** o superior.
 
 
-## The Author
+## Autor
 
 Carlos Guzman
