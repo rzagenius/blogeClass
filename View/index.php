@@ -22,7 +22,10 @@
             <hr class="clear" /><br />
        </div>
     <?php endforeach ?>
-
+    <ul class="pager">
+      <li><a href="#">Anterior</a></li>
+      <li><a href="#">Siguiente</a></li>
+    </ul>
 <?php endif ?>
 
 <?php require 'inc/footer.php' ?>

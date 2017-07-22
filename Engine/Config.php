@@ -12,5 +12,5 @@ final class Config
     DB_PWD =  '',
 
     // Titulo del sitio
-    SITE_NAME = 'Mi Blog!';
+    SITE_NAME = 'Carlos Blog!';
 }

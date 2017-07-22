@@ -4,7 +4,8 @@ namespace TestProject\Controller;
 
 class Blog
 {
-    const MAX_POSTS = 5;
+    const MAX_POSTS = 2;
+    const OFFSET =0;
 
     protected $oUtil, $oModel;
     private $_iId;
