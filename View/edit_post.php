@@ -2,7 +2,7 @@
 <?php require 'inc/msg.php' ?>
 
 <?php if (empty($this->oPost)): ?>
-    <p class="error">¡No se encontraron datos</p>
+    <div class="alert alert-danger">¡No se encontraron datos</div>
 <?php else: ?>
 
     <form action="" method="post">

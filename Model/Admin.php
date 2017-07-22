@@ -2,7 +2,7 @@
 
 
 namespace TestProject\Model;
-
+//valida admin
 class Admin extends Blog
 {
     public function login($sEmail)
@@ -12,6 +12,6 @@ class Admin extends Blog
         $oStmt->execute();
         $oRow = $oStmt->fetch(\PDO::FETCH_OBJ);
 
-        return @$oRow->password; 
+        return @$oRow->password;
     }
 }

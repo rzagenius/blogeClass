@@ -11,6 +11,6 @@ final class Config
     DB_USR =  'root',
     DB_PWD =  '',
 
-    // Titulo Blog
+    // Titulo del sitio
     SITE_NAME = 'Mi Blog!';
 }

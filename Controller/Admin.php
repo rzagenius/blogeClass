@@ -4,6 +4,7 @@ namespace TestProject\Controller;
 
 class Admin extends Blog
 {
+    // Login de usuario
     public function login()
     {
         if ($this->isLogged())
@@ -17,18 +18,20 @@ class Admin extends Blog
             $sHashPassword =  $this->oModel->login($_POST['email']);
             if (password_verify($_POST['password'], $sHashPassword))
             {
-                $_SESSION['is_logged'] = 1; // Admin is logged now
+                $_SESSION['is_logged'] = 1;
                 header('Location: ' . ROOT_URL . '?p=blog&a=all');
                 exit;
             }
             else
             {
-                $this->oUtil->sErrMsg = 'Incorrect Login!';
+                $this->oUtil->sErrMsg = 'login Incorrecto! Revice Su usuario/clave';
             }
         }
 
         $this->oUtil->getView('login');
     }
+
+    // logout de usuario
 
     public function logout()
     {
@@ -42,7 +45,6 @@ class Admin extends Blog
             session_destroy();
         }
 
-        // Redirect to the homepage
         header('Location: ' . ROOT_URL);
         exit;
     }

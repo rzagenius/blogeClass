@@ -1,7 +1,7 @@
 <?php require 'inc/header.php' ?>
 
 <?php if (empty($this->oPosts)): ?>
-    <p class="bold">No hay ninguna publicación en el blog.</p>
+    <div class="alert alert-danger"><p class="bold">No hay ninguna publicación en el blog.</p></div>
     <p><button type="button" onclick="window.location='<?=ROOT_URL?>?p=blog&amp;a=add'" class="bold">Agrega un Nuevo post</button></p>
 <?php else: ?>
               <h1 class="page-header">

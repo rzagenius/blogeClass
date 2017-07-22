@@ -16,7 +16,7 @@ class Util
     }
 
     /**
-     * This method is useful in order to avoid the duplication of code (create almost the same method for "getView" and "getModel"
+     * Este método es útil para evitar la duplicación de código (crear casi el mismo método para "getView" y "getModel"
      */
     private function _get($sFileName, $sType)
     {

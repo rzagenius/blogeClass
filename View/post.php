@@ -2,7 +2,7 @@
 <?php require 'inc/header.php' ?>
 
 <?php if (empty($this->oPost)): ?>
-    <p class="error">No se puede encontrar la publicación!!!</p>
+    <div class="alert alert-danger">No se puede encontrar la publicación!!!</div>
 <?php else: ?>
 
     <article>

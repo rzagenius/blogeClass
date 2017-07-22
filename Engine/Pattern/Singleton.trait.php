@@ -8,12 +8,7 @@ trait Singleton
 
     protected static $_oInstance = null;
 
-    /**
-     * Get instance of class.
-     *
-     * @access public
-     * @static
-     * @return
+    /** intancia de clases
      */
     public static function getInstance()
     {

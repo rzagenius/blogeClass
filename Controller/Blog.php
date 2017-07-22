@@ -8,7 +8,7 @@ class Blog
 
     protected $oUtil, $oModel;
     private $_iId;
-
+    //constructor
     public function __construct()
     {
 
@@ -26,28 +26,28 @@ class Blog
     }
 
 
-
+    //Acceso a princial index
     public function index()
     {
         $this->oUtil->oPosts = $this->oModel->get(0, self::MAX_POSTS);
 
         $this->oUtil->getView('index');
     }
-
+    //post por id
     public function post()
     {
         $this->oUtil->oPost = $this->oModel->getById($this->_iId);
 
         $this->oUtil->getView('post');
     }
-
+    //vista de post no encontrado
     public function notFound()
     {
         $this->oUtil->getView('not_found');
     }
 
 
-
+    //logout y muestra todos los post
     public function all()
     {
         if (!$this->isLogged()) exit;
@@ -57,7 +57,7 @@ class Blog
         $this->oUtil->getView('index');
     }
 
-
+    //Agregar post nuevos
     public function add()
     {
         if (!$this->isLogged()) exit;
@@ -81,7 +81,7 @@ class Blog
 
         $this->oUtil->getView('add_post');
     }
-
+    //modificar un post
     public function edit()
     {
         if (!$this->isLogged()) exit;
@@ -103,12 +103,12 @@ class Blog
             }
         }
 
-        /* Get the data of the post */
+        //detalle del post
         $this->oUtil->oPost = $this->oModel->getById($this->_iId);
 
         $this->oUtil->getView('edit_post');
     }
-
+    //eliminar un post
     public function delete()
     {
         if (!$this->isLogged()) exit;

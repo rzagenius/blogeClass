@@ -1,13 +1,13 @@
 <?php
-
+//configuracion de rutas y validacion de version php de servidor
 namespace TestProject;
 
 use TestProject\Engine as E;
 
 if (version_compare(PHP_VERSION, '5.5.0', '<'))
-    exit('Your PHP version is ' . PHP_VERSION . '. The script requires PHP 5.5 or higher.');
+    exit('Tu  PHP version de ' . PHP_VERSION . '. Este blog requiere PHP 5.5 o superior.');
 if (!extension_loaded('mbstring'))
-    exit('The script requiere "mbstring" PHP extension. Please install it.');
+    exit('Este blog requiere "mbstring" extensión PHP. Instala por favor.');
 
 
 
