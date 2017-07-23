@@ -13,6 +13,7 @@ class Blog
     //obtener post por pagina
     public function get($iOffset, $iLimit)
     {
+        if ($iOffset > 0){$iOffset = ($iOffset - 1) * $iLimit;}
         $oStmt = $this->oDb->prepare('SELECT * FROM Posts ORDER BY createdDate DESC LIMIT :offset, :limit');
         $oStmt->bindParam(':offset', $iOffset, \PDO::PARAM_INT);
         $oStmt->bindParam(':limit', $iLimit, \PDO::PARAM_INT);
@@ -48,7 +49,7 @@ class Blog
         $oStmt->bindValue(':body', $aData['body']);
         return $oStmt->execute();
     }
-    //borrar un post por id 
+    //borrar un post por id
     public function delete($iId)
     {
         $oStmt = $this->oDb->prepare('DELETE FROM Posts WHERE id = :postId LIMIT 1');

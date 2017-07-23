@@ -4,8 +4,7 @@ namespace TestProject\Controller;
 
 class Blog
 {
-    const MAX_POSTS = 2;
-    const OFFSET =0;
+    const MAX_POSTS = 5;
 
     protected $oUtil, $oModel;
     private $_iId;
@@ -30,7 +29,13 @@ class Blog
     //Acceso a princial index
     public function index()
     {
-        $this->oUtil->oPosts = $this->oModel->get(0, self::MAX_POSTS);
+        $iOffset = (int) (!empty($_GET['pg']) ? $_GET['pg'] : 0);
+
+        $this->oUtil->oPosts = $this->oModel->get($iOffset, self::MAX_POSTS);
+
+        $this->oUtil->oPosta = $this->oModel->getAll();
+
+        $this->oUtil->oNumbr =  self::MAX_POSTS ;
 
         $this->oUtil->getView('index');
     }
@@ -54,6 +59,10 @@ class Blog
         if (!$this->isLogged()) exit;
 
         $this->oUtil->oPosts = $this->oModel->getAll();
+
+        $this->oUtil->oPosta = $this->oModel->getAll();
+
+        $this->oUtil->oNumbr =  self::MAX_POSTS ;
 
         $this->oUtil->getView('index');
     }

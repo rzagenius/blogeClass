@@ -22,10 +22,15 @@
             <hr class="clear" /><br />
        </div>
     <?php endforeach ?>
-    <ul class="pager">
-      <li><a href="#">Anterior</a></li>
-      <li><a href="#">Siguiente</a></li>
-    </ul>
-<?php endif ?>
+    <?php if (sizeof($this->oPosta) > 5):?>
+          <ul class="pagination">
+              <li><a href="#">&laquo;</a></li>
+              <?php for($i=1; $i<=  ceil(sizeof($this->oPosta) / $this->oNumbr);$i++):?>
+                 <li><a href="<?=ROOT_URL?>?p=blog&amp;pg=<?=$i?>"><?=$i?></a></li>
+              <?php endfor ?>
+              <li><a href="#">&raquo;</a></li>
+         </ul>
+    <?php endif ?>
 
+<?php endif ?>
 <?php require 'inc/footer.php' ?>
