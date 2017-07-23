@@ -24,11 +24,11 @@
     <?php endforeach ?>
     <?php if (sizeof($this->oPosta) > 5):?>
           <ul class="pagination">
-              <li><a href="#">&laquo;</a></li>
+              <li ><a href="<?=ROOT_URL?>?p=blog&amp;pg=<?=(int) (!empty($_GET['pg']) ? $_GET['pg'] - 1 : 0)?>">&laquo;</a></li>
               <?php for($i=1; $i<=  ceil(sizeof($this->oPosta) / $this->oNumbr);$i++):?>
                  <li><a href="<?=ROOT_URL?>?p=blog&amp;pg=<?=$i?>"><?=$i?></a></li>
               <?php endfor ?>
-              <li><a href="#">&raquo;</a></li>
+              <li><a href="<?=ROOT_URL?>?p=blog&amp;pg=<?=(int) (!empty($_GET['pg']) ? $_GET['pg'] + 1 : 0)?>">&raquo;</a></li>
          </ul>
     <?php endif ?>
 
