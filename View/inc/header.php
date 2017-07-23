@@ -27,8 +27,9 @@
             <ul class="nav navbar-nav navbar-right">
               <li><a class="active" href="<?=ROOT_URL?>">Home</a></li>
               <li><a class="disabled" href="<?=ROOT_URL?>?p=user&amp;a=login">Admin</a></li>
+              <?php if (!empty($_SESSION['is_logged'])): ?>
               <li><a class="active" href="<?=ROOT_URL?>?p=user&amp;a=logout">Logout</a></li>
-
+              <?php endif ?>
             </ul>
 
           </div>

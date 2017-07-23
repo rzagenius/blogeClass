@@ -2,7 +2,7 @@
                             <footer>
                                 <?php if (!empty($_SESSION['is_logged'])): ?>
                                     Estas conectado como Admin - &nbsp; | &nbsp;
-                                    <a href="<?=ROOT_URL?>?p=blog&amp;a=all">Ver todos los posts del blog</a>
+                                    <a href="<?=ROOT_URL?>?p=blog&amp;a=all" class="btn btn-primary btn-lg" role="button">Ver todos los posts del blog</a>
                                 <?php endif ?>
                                 </p>
                             </footer>
