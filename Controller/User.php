@@ -2,7 +2,7 @@
 
 namespace TestProject\Controller;
 
-class Admin extends Blog
+class User extends Blog
 {
     // Login de usuario
     public function login()
@@ -12,8 +12,8 @@ class Admin extends Blog
 
         if (isset($_POST['email'], $_POST['password']))
         {
-            $this->oUtil->getModel('Admin');
-            $this->oModel = new \TestProject\Model\Admin;
+            $this->oUtil->getModel('User');
+            $this->oModel = new \TestProject\Model\User;
 
             $sHashPassword =  $this->oModel->login($_POST['email']);
             if (password_verify($_POST['password'], $sHashPassword))

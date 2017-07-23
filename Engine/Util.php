@@ -24,14 +24,9 @@ class Util
         if (is_file($sFullPath))
             require $sFullPath;
         else
-            exit('The "' . $sFullPath . '" file doesn\'t exist');
+            exit('The "' . $sFullPath . '" ruta\'t no existe');
     }
 
-    /**
-     * Set variables for the template views.
-     *
-     * @return void
-     */
     public function __set($sKey, $mVal)
     {
         $this->$sKey = $mVal;

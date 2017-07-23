@@ -26,8 +26,8 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               <li><a class="active" href="<?=ROOT_URL?>">Home</a></li>
-              <li><a class="disabled" href="<?=ROOT_URL?>?p=admin&amp;a=login">Admin</a></li>
-              <li><a class="active" href="<?=ROOT_URL?>?p=admin&amp;a=logout">Logout</a></li>
+              <li><a class="disabled" href="<?=ROOT_URL?>?p=user&amp;a=login">Admin</a></li>
+              <li><a class="active" href="<?=ROOT_URL?>?p=user&amp;a=logout">Logout</a></li>
 
             </ul>
 
