@@ -25,4 +25,9 @@
 
 <?php endif ?>
 
+    <ul class="pager">
+      <li><a href="<?=ROOT_URL?>?p=blog&amp;a=post&amp;id=<?=$_GET['id'] - 1?>">Anterior</a></li>
+      <li><a href="<?=ROOT_URL?>?p=blog&amp;a=post&amp;id=<?=$_GET['id'] + 1?>">Siguiente</a></li>
+    </ul>
+
 <?php require 'inc/footer.php' ?>
